@@ -3,7 +3,6 @@
     color: #FF395B;
 }
 
-
 .container-home-daan {
     list-style-type: none;
     display: flex;
@@ -11,8 +10,6 @@
     align-items: center;
     height: 50px;
 }
-
-
 
 .navbar-lewagon {
     height: 60px;
@@ -22,12 +19,10 @@
 .home-navbar-menu {
     display: flex;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
-.home-owner {
-    margin: 15px;
-}
-
+.home-owner,
 .home-menu {
     margin: 15px;
 }
@@ -45,13 +40,34 @@
 
 .home-banner {
     height: 800px;
-    background-size: cover;
+    width: 100%;
+    background-size: 100% 100%;
     background-image: url("https://media.gettyimages.com/photos/dog-wirehaired-pointing-griffon-domestic-dog-wirehaired-pointing-in-picture-id157895575?k=6&m=157895575&s=612x612&w=0&h=s6xH9B2uwwT4OeCpMuzt6SBnEeTTHhw0CGIIGPYOCco=");
 }
 
 .home-banner-text {
-    color: white;
+    color: black;
     font-size: bold;
     padding-top: 120px;
+}
+
+.banner-paragraph {
+    padding-top: 20px;
+    color: white;
+}
+
+.home-buttons-links {
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+.home-banner-container-text {
+    width: 500px;
     padding-left: 30px;
+    padding-top: 30px;
+}
+
+.btn-outline-danger {
+    background-color: white;
 }
