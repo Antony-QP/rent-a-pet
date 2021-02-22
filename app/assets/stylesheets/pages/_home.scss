@@ -59,14 +59,19 @@ h2 {
 .home-navbar-menu {
     display: flex;
     align-items: center;
-    width: 600px;
+    width: 30%;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 30px;
 }
 
+.home-navbar-menu a {
+    text-decoration: none;
+    color: gray;
+}
+
 .home-owner {
-    margin: 15px;
+    margin: 6px;
     color: black;
 }
 
