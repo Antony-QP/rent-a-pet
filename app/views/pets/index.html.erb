@@ -1,10 +1,10 @@
 <div class="d-flex">
   <div class="container w-50">
-    <h1>Pets in Amsterdam</h1>
-    <% @pets.each do |pet| %>
-    <div class="row">
-      <div class="col-lg-12 col-md-12">
-        <div class="card mb-2">
+    <div class="col-lg-12">
+      <h1>Pets in Amsterdam</h1>
+      <% @pets.each do |pet| %>
+      <div class="row">
+        <div class="card mb-2 w-100">
           <div class="card-body d-flex">
             <img class="cd-img w-25" src="..." />
             <div class="w-100">
@@ -16,7 +16,10 @@
                 <i class="far fa-heart"></i>
               </div>
               <div class="border-bottom">
-                <%= link_to pet_path(pet) do %> <span class="font-weight-bold text-dark"><%= pet.name %> - <%= pet.breed %></span>
+                <%= link_to pet_path(pet) do %>
+                <span class="font-weight-bold text-dark"
+                  ><%= pet.name %> - <%= pet.breed %></span
+                >
               </div>
               <% end %>
               <div>
@@ -29,8 +32,8 @@
           </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 
   <div class="map w-50 sticky-top">
