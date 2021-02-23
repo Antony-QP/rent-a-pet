@@ -18,13 +18,16 @@
 
 .home-navbar-menu {
     display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: space-between;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
-.home-owner,
-.home-menu {
+.home-owner {
     margin: 15px;
+    color: black;
 }
 
 .home-icon {
@@ -47,7 +50,7 @@
 
 .home-banner-text {
     color: black;
-    font-size: bold;
+    font-weight: bolder;
     padding-top: 120px;
 }
 
