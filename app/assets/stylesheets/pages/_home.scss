@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+.fas.fa-paw {
+    color: #FF395B;
+}
+
+.container {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-lewagon {
+    height: 60px;
+    padding-top: 12px;
+}
+
+.home-navbar-menu {
+    display: flex;
+    padding-left: 20px;
+}
+
+.home-owner {
+    margin: 15px;
+}
+
+.home-menu {
+    margin: 15px;
+}
+
+.home-icon {
+    display: flex;
+    color: #FF395B;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.home-navbar-text {
+    margin-left: 20px;
+}
