@@ -23,6 +23,7 @@
           </tr>
         </tbody>
       </table>
+      <%= link_to "Delete", pet_path(@pet), method: :delete, data: { confirm: "Delete?" }%>
     </div>
   </div>
 </div>

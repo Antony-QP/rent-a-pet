@@ -20,7 +20,7 @@ class PetsController < ApplicationController
       render 'new'
     end
   end
-
+  
   def edit
     @pet = Pet.find(params[:id])
   end
@@ -29,6 +29,11 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.update(pet_params)
     redirect_to pet_path(@pet)
+    
+  def destroy
+    @pet = Pet.find(params[:id])
+    @pet.destroy
+    redirect_to pets_path
   end
 
   private
