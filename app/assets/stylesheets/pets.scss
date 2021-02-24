@@ -1,16 +1,9 @@
 .map{
-    // height: 100vh;
+    height: 100vh;
+    position: sticky
 }
 
 .pet-card-img{
     background-size: cover;
     background-position: center;
-}
-
-.fas .fa-map-marker-alt:hover{
-    fill: #FF395B;
-}
-
-i:hover{
-    background-color: #FF395B;
 }
