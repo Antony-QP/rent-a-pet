@@ -1,3 +1,30 @@
+<div class='navbar-lewagon'>
+  <div class='container-home-daan'>
+    <div class='home-icon'>
+      <div><i class="fas fa-paw  fa-2x" ></i>
+      </div>
+      <div class='home-navbar-text'><h3>Rent a pet</h3></div>
+    </div>
+    <div class='home-navbar-menu'>
+      <div class='home-owner'><h5><%= link_to "See all pets", pets_path%></h5></div>
+      <div class='home-owner'><h5><%= link_to "Become an owner", new_pet_path%></h5> </div>
+      <div><i class="fas fa-user-circle fa-2x"></i></div>
+    </div>
+  </div>
+</div>
+
+<div class="home-banner">
+  <div class='home-banner-container-text pl-30px'>
+  <i class="fas fa-paw  fa-3x" ></i>
+    <div class="home-banner-text"><h2>Animal for Rent</h1>
+    </div>
+    <div class="banner-paragraph"><h1>Do you want some company in these dark days? Or do you want to try if a pet is right for you?</h2></div>
+    <div class="home-buttons-links">
+    <%= link_to "See all pets", pets_path, class: "btn btn-primary"%>
+    <%= link_to "List a pet", new_pet_path, class: "btn btn-outline-danger"%>
+    </div>
+  </div>
+
 <div class="container">
 <h2><strong>Rent any type of pet</strong></h2>
 <div class="cards">
@@ -50,5 +77,5 @@
     <a href="#">
       <i class="fab fa-fw fa-instagram"></i>
     </a>
-  </div>
+   </div>
 </div>
