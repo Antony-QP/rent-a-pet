@@ -1,8 +1,47 @@
 // Specific CSS for your home-page
+h2 {
+  margin-bottom: 24px;
+}
+
+.home-card-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+.cards {
+  display: flex;
+  margin-bottom: 400px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  border: 1px solid rgb(230,230,230);
+  margin-right: 16px;
+}
+
+.footer {
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgb(247, 247, 247);
+  padding: 0px 40px;
+  display: flex;
+  margin: 0px 20px;
+}
+
+.footer a {
+  font-size: 30px;
+  color: rgb(248, 56, 92);
+}
+
 .fas.fa-paw {
     color: #FF395B;
 }
-
 
 .container-home-daan {
     list-style-type: none;
@@ -19,15 +58,16 @@
 
 .home-navbar-menu {
     display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: space-between;
     padding-left: 20px;
+    padding-right: 30px;
 }
 
 .home-owner {
     margin: 15px;
-}
-
-.home-menu {
-    margin: 15px;
+    color: black;
 }
 
 .home-icon {
@@ -43,13 +83,34 @@
 
 .home-banner {
     height: 800px;
-    background-size: cover;
+    width: 100%;
+    background-size: 100% 100%;
     background-image: url("https://media.gettyimages.com/photos/dog-wirehaired-pointing-griffon-domestic-dog-wirehaired-pointing-in-picture-id157895575?k=6&m=157895575&s=612x612&w=0&h=s6xH9B2uwwT4OeCpMuzt6SBnEeTTHhw0CGIIGPYOCco=");
 }
 
 .home-banner-text {
-    color: white;
-    font-size: bold;
+    color: black;
+    font-weight: bolder;
     padding-top: 120px;
+}
+
+.banner-paragraph {
+    padding-top: 20px;
+    color: white;
+}
+
+.home-buttons-links {
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+.home-banner-container-text {
+    width: 500px;
     padding-left: 30px;
+    padding-top: 30px;
+}
+
+.btn-outline-danger {
+    background-color: white;
 }
