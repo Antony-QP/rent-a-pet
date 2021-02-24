@@ -1,0 +1,22 @@
+<div class='navbar-lewagon'>
+  <div class='container-home-daan'>
+    <div class='home-icon'>
+      <%= link_to root_path do  %>
+      <i class="fas fa-paw  fa-2x" ></i>
+      <% end %>
+      <div class='home-navbar-text'><h3><strong>Rent-a-pet</strong></h3></div>
+    </div>
+    <div class='home-navbar-menu'>
+      <div class='home-owner'><h5><%= link_to "See all pets", pets_path%></h5></div>
+      <div class='home-owner'><h5><%= link_to "Become an owner", new_pet_path%></h5> </div>
+      <div class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
+          <%= link_to "Sign out", destroy_user_session_path, class: "dropdown-item" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
