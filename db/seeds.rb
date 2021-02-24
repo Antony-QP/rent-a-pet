@@ -2,6 +2,19 @@ require 'open-uri'
 
 puts "step1 - Cleaning the database"
 Pet.destroy_all
+User.destroy_all
+
+user1 = User.create!(email: "anthony@gmail.com", password: "123456")
+user1 = User.create!(email: "billy@gmail.com", username: , password: "123456")
+user1 = User.create!(email: "andy@gmail.com", password: "123456")
+user1 = User.create!(email: "james@gmail.com", password: "123456")
+user1 = User.create!(email: "harrietgmail.com", password: "123456")
+user1 = User.create!(email: "marley@gmail.com", password: "123456")
+user1 = User.create!(email: "ben@gmail.com", password: "123456")
+user1 = User.create!(email: "dillan@gmail.com", password: "123456")
+user1 = User.create!(email: "ozzy@gmail.com", password: "123456")
+user1 = User.create!(email: "sarah@gmail.com", password: "123456")
+
 
 puts "step3 - Creating Pets"
 
