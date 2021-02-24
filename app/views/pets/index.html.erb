@@ -16,19 +16,20 @@
 <div class="d-flex">
   <div class="container w-50">
     <div class="col-lg-12">
-      <h1>Pets in Amsterdam</h1>
+      <h1>Pets in Amsterdam...</h1>
       <% @pets.each do |pet| %>
       <div class="row">
         <div class="card mb-2 w-100">
           <div class="card-body d-flex">
-            <img class="cd-img w-25" src="..." />
+            <!-- <img class="cd-img w-25" src="..." /> -->
+            <div class="pet-card-img cd-img w-50 mr-2 rounded" style="background-image: url('<%= cl_image_path (pet.photo.key), crop: :fill %>')"></div>
             <div class="w-100">
               <div class="d-flex justify-content-between">
                 <span
-                  ><i class="fas fa-map-marker-alt"></i><%= pet.location
+                  ><i class="fas fa-map-marker-alt text-primary"></i><%= pet.location
                   %></span
                 >
-                <i class="far fa-heart"></i>
+                <i class="far fa-heart text-primary"></i>
               </div>
               <div class="border-bottom">
                 <%= link_to pet_path(pet) do %>

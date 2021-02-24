@@ -1,34 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
-pet_1 = Pet.new({
-    name: "Maisey",
-    description: "White cat",
-    location: "Amsterdam",
-    breed: "Siamese",
-    price: 5,
-    user_id: 1
-}).save
+puts "step1 - Cleaning the database"
+Pet.destroy_all
 
-pet_2 = Pet.new({
-    name: "Dillan",
-    description: "A very unfriendly dog",
-    location: "Amsterdam",
-    breed: "German Shepherd",
-    price: 7.5,
-    user_id: 1
-}).save
+puts "step3 - Creating Pets"
 
-pet_3 = Pet.new({
-    name: "Squawk",
-    description: "Friendly parrot",
-    location: "Amsterdam",
-    breed: "Green parrot",
-    price: 2,
-    user_id: 1
-}).save
+pet_1_picture = URI.open('https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg?h=bf654dbc&itok=MQGvBmuo')
+pet1 = Pet.new(name: "Dillan", location: "Amsterdam", breed: "Dog", description: "First dog", price: 150, user_id: 5)
+pet1.photo.attach(io: pet_1_picture, filename: 'pet1.png', content_type: 'image/png')
+pet1.save!
+
+pet_2_picture = URI.open('https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201030094143-stock-rhodesian-ridgeback.jpg')
+pet2 = Pet.new(name: "Bob", location: "Berlin", breed: "Dog", description: "Happy dog", price: 150, user_id: 6)
+pet2.photo.attach(io: pet_2_picture, filename: 'pet2.png', content_type: 'image/png')
+pet2.save!
+
+pet_3_picture = URI.open('https://www.humanesociety.org/sites/default/files/styles/768x326/public/2020-07/dog-518805.jpg?h=e22bf01e&itok=uE4KGkuj')
+pet3 = Pet.new(name: "Sally", location: "London", breed: "Dog", description: "Sad dog", price: 150, user_id: 7)
+pet3.photo.attach(io: pet_3_picture, filename: 'pet3.png', content_type: 'image/png')
+pet3.save!
+
+pet_4_picture = URI.open('https://www.helpguide.org/wp-content/uploads/dog-resting-chin-on-persons-hand-768.jpg')
+pet4 = Pet.new(name: "Vince", location: "Paris", breed: "Dog", description: "Annoying dog", price: 150, user_id: 8)
+pet4.photo.attach(io: pet_4_picture, filename: 'pet4.png', content_type: 'image/png')
+pet4.save!
