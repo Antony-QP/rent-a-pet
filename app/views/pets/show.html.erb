@@ -35,8 +35,8 @@
 
         <div class="box2">
           <div class="container-show2">
-            <div class="card mb-3">
-              <h5 class="card-text2">Book this pet!</h5>
+            <div class="card mb-3 p-3">
+              <h5 class="card2">Book this pet!</h5>
               <%= simple_form_for [@pet, @booking] do |f| %>
                 <%=  f.input :start_date, as: :date %>
                 <%=  f.input :end_date, as: :date %>
