@@ -10,16 +10,26 @@
 
           <div class="card-body text-left">
             <h5 class="card-title"><%= @pet.name %> - <%= @pet.breed %></h5>
-              <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
+
+            <div class="container-location">
+              <div class="location-pet">
+                <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
+              </div>
+                <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+            </div>
+
           <div class="container-owner">
               <div class="rick">
+                
                 <h6 class="card-text"><strong><%= current_user.email.split('@')[0].capitalize %></strong></h6>
+
               </div>
-                <%= image_tag("rick.png", class: "avatar-bordered") %>
+                <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
           </div>
           <br>
           <p class="card-text">Description: <%= @pet.description%></p>
             <p class="card-text">Price: <%= @pet.price%> euro </p>
+            <br>
               <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
               <%= link_to "Delete Dog Post", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
           </div>
@@ -27,8 +37,8 @@
 
         <div class="box2">
           <div class="container-show2">
-            <div class="card mb-3">
-              <h5 class="card-text2">Booking form</h5>
+            <div class="card mb-3 p-3">
+              <h5 class="card2">Book this pet!</h5>
               <%= simple_form_for [@pet, @booking] do |f| %>
                 <%=  f.input :start_date, as: :date %>
                 <%=  f.input :end_date, as: :date %>
