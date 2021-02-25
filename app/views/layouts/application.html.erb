@@ -3,7 +3,7 @@
   <head>
     <title>RentAPet</title>
     <%= csrf_meta_tags %> <%= csp_meta_tag %>
-
+    <%= stylesheet_pack_tag 'application' %>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -14,9 +14,12 @@
   </head>
 
   <body>
-    <%= render "/shared/navbar" %>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="main-container">
+      <%= render "/shared/navbar" %>
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render "/shared/footer" %>
+    </div>
   </body>
 </html>

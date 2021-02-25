@@ -1,15 +1,9 @@
-.map{
-    height: 100vh;
-    position: sticky
-}
+// .map{
+//     height: 100vh;
+//     position: sticky
+// }
 
 .pet-card-img{
     background-size: cover;
     background-position: center;
 }
-
-@media only screen and (max-width: 600px) {
-    .map {
-      display: none;
-    }
-  }
