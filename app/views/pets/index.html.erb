@@ -37,7 +37,6 @@
     </div>
   </div>
 
-  <div class="map w-50 sticky-top ">
-    <%= image_tag("map.png", style: 'height:100vh;width:100%;', class: "sticky-top") %>
+  <div class="sticky-top" id="map" style="width: 50%; height: 100vh; position: sticky;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
