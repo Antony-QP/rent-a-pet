@@ -1,0 +1,6 @@
+<h1>Bookings page</h1>
+<% @bookings.each do |booking|%>
+  <%= booking.pet.name %>
+  <%= booking.pet.location %>
+  <%= booking.pet.photo %>
+<%end  %>

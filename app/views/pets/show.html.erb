@@ -14,7 +14,7 @@
         <p class="card-text">Price: <%= @pet.price%> euro </p>
         <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
         <%= link_to "Delete", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
-        <%= link_to "Book animal", pet_path(@pet), class: "btn btn-outline-secondary btn-sm"%>
+        <%= link_to "Book animal", pet_bookings_path(@pet), class: "btn btn-outline-secondary btn-sm"%>
       </div>
     </div>
   </div>
