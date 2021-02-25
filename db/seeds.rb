@@ -68,3 +68,4 @@ pet_10_picture = URI.open('https://www.helpguide.org/wp-content/uploads/dog-rest
 pet10 = Pet.new(name: "Vince", location: "Zijlweg", breed: "Dog", description: "Annoying dog", price: 15, user_id: user10.id)
 pet10.photo.attach(io: pet_10_picture, filename: 'pet10.png', content_type: 'image/png')
 pet10.save!
+

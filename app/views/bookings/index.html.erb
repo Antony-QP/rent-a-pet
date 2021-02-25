@@ -1,6 +1,21 @@
-<h1>Bookings page</h1>
+<h1>My dashboard</h1>
 <% @bookings.each do |booking|%>
   <%= booking.pet.name %>
   <%= booking.pet.location %>
   <%= booking.pet.photo %>
 <%end  %>
+
+<p>Upcoming</p>
+<p>Past</p>
+
+
+<div class="container-index-bookings">
+  <h2><strong>Rent the pet of your choice</strong></h2>
+  <div class="cards">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Card 1</h5>
+      </div>
+    </div>
+  </div>
+</div>
