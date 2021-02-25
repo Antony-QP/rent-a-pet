@@ -1,14 +1,49 @@
 
 .pet-img-show {
-  width: 50%;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   background-position: center;
   background-size: cover;
-  border-radius: 2%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
 
 .container-show {
   margin-top: 30px;
+  width: 1000px;
+  height: auto;
+}
+
+.container-owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.rick {
+  margin-right: 100px;
+}
+
+.box2 {
+  margin-top: 15px;
+  margin-left: 325px;
+}
+
+.container-show2 {
+  width: 350px;
+  height: auto;
+}
+
+.btn-bookpet {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(248, 56, 92);
+  transition: background 0.3s ease;
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+}
+
+.card-text2 {
+  padding: 8px;
 }
