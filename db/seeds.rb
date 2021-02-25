@@ -1,6 +1,7 @@
 require 'open-uri'
 
 puts "step1 - Cleaning the database"
+Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
 
