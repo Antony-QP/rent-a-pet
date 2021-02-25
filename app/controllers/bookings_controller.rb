@@ -3,8 +3,10 @@ class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
       @pets = Pet.all
+      @my_bookings = current_user.bookings
+      @my_pets_bookings = current_user.received_bookings
     end
-  
+
     def new
       @booking = Booking.new
       @pet = Pet.find(params[:pet_id])
@@ -21,7 +23,7 @@ class BookingsController < ApplicationController
 
     def edit
       @booking = Booking.find(params[:id])
-      
+
     end
 
     def update

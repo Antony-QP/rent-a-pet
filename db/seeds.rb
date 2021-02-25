@@ -69,3 +69,11 @@ pet10 = Pet.new(name: "Vince", location: "Zijlweg", breed: "Dog", description: "
 pet10.photo.attach(io: pet_10_picture, filename: 'pet10.png', content_type: 'image/png')
 pet10.save!
 
+puts "step 4 - Creating seeds"
+
+booking1 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,05), user_id: user1.id, pet_id: pet2.id)
+booking1.save!
+
+booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet1.id)
+booking2.save!
+
