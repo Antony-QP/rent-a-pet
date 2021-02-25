@@ -1,6 +1,11 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pet.all
+    if params[:query].present?
+      sql_query = "breed ILIKE :query OR description ILIKE :query OR location ILIKE :query"
+      @pets = Pet.where("breed ILIKE ?", "%#{params[:query]}%")
+    else
+      @pets = Pet.all
+    end
 
     @markers = @pets.geocoded.map do |pet|
       {
@@ -14,6 +19,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

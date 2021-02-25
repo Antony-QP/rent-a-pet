@@ -9,7 +9,7 @@
 }
 
 .container-show {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 1000px;
   height: auto;
 }
@@ -18,32 +18,46 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  border-bottom: lightgrey 1px solid;
+  padding-bottom: 7px;
+  margin-top: -10px;
+}
+
+.container-location {
+  display: flex;
+  justify-content: start;
 }
 
 .rick {
-  margin-right: 100px;
+  width: 405px;
+}
+
+.location-pet {
+  margin-right: 7px;
 }
 
 .box2 {
-  margin-top: 15px;
-  margin-left: 325px;
+  margin-top: 17px;
+  margin-left: 21px;
 }
 
 .container-show2 {
-  width: 350px;
+  width: 455px;
   height: auto;
 }
 
 .btn-bookpet {
   color: white;
   padding: 8px 24px;
+  border: white 1px solid;
   border-radius: 4px;
   background: rgb(248, 56, 92);
   transition: background 0.3s ease;
   padding: 10px 20px 10px 20px;
   font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-.card-text2 {
-  padding: 8px;
+.card2 {
+  margin-bottom: 15px;
 }

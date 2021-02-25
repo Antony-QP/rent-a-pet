@@ -1,14 +1,16 @@
 <div class="container mt-5">
     <div class="col-lg-6 offset-lg-3">
-        <h1>Create a pet</h1>
+        <h1>Who will be joining us?</h1>
         <%= simple_form_for @pet do |f| %>
         <%=  f.input :name %>
         <%=  f.input :description %>
-        <%=  f.input :location %>
+        <!-- <label for="form-address">Search for address</label>
+        <input name=<%= params[:location] %> class="form-control" id= "form-address" type="search"> -->
+    <%=  f.input :location, input_html: { type: "search", id: "form-address" } %>
         <%=  f.input :breed %>
         <%=  f.input :price %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit class: "btn btn-primary"%>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
         <%  end %>
     </div>
 </div>
