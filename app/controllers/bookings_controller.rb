@@ -7,13 +7,15 @@ class BookingsController < ApplicationController
   
     def new
       @booking = Booking.new
+      @pet = Pet.find(params[:pet_id])
     end
 
     def create
       @booking = Booking.new(booking_params)
       @pet = Pet.find(params[:pet_id])
+      @booking.user = current_user
       @booking.pet = @pet
-      @booking.save
+      @booking.save!
       redirect_to pets_path
     end
 
