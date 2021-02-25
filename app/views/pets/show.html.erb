@@ -1,20 +1,39 @@
 <div class="d-flex justify-content-center">
   <div class="container-show">
-    <div class="card mb-3" style="width: 800px; height: auto;">
-      <div class="card-body text-left">
-        <h5 class="card-title"><%= @pet.name %> - <%= @pet.breed %></h5>
-        <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
-
-        <div class="pet-img-show" style="background-image: url('<%=cl_image_path(@pet.photo.key)%>')">
+    <div class="card mb-3">
+       <div class="pet-img-show" style="background-image: url('<%=cl_image_path(@pet.photo.key)%>')">
         </div>
 
-        <br>
-        <h6 class="card-text"><strong>Owned by Bob <%= @user %></strong></h6>
-        <p class="card-text">Description: <%= @pet.description%></p>
-        <p class="card-text">Price: <%= @pet.price%> euro </p>
-        <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
-        <%= link_to "Delete", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
-        <%= link_to "Book animal", pet_path(@pet), class: "btn btn-outline-secondary btn-sm"%>
+        <div class="d-flex justify-content-space-between">
+
+          <div class="box1">
+
+          <div class="card-body text-left">
+            <h5 class="card-title"><%= @pet.name %> - <%= @pet.breed %></h5>
+              <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
+          <div class="container-owner">
+              <div class="rick">
+                <h6 class="card-text"><strong>Owned by Rick <%= @user %></strong></h6>
+              </div>
+                <%= image_tag("rick.png", class: "avatar-bordered") %>
+          </div>
+          <br>
+          <p class="card-text">Description: <%= @pet.description%></p>
+            <p class="card-text">Price: <%= @pet.price%> euro </p>
+              <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
+              <%= link_to "Delete Dog Post", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
+          </div>
+        </div>
+
+        <div class="box2">
+          <div class="container-show2">
+            <div class="card mb-3">
+              <h5 class="card-text2">Booking form</h5>
+              <%= link_to "Book animal", pet_path(@pet), class: "btn-bookpet"%>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
