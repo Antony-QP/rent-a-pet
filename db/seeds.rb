@@ -68,3 +68,9 @@ pet_10_picture = URI.open('https://www.helpguide.org/wp-content/uploads/dog-rest
 pet10 = Pet.new(name: "Vince", location: "Zijlweg", breed: "Dog", description: "Annoying dog", price: 15, user_id: user10.id)
 pet10.photo.attach(io: pet_10_picture, filename: 'pet10.png', content_type: 'image/png')
 pet10.save!
+
+puts "creating bookings..."
+booking1 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,05), user_id: user1.id, pet_id: pet1.id)  
+booking1.save!
+booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet2.id)   
+booking2.save!

@@ -20,7 +20,9 @@
 
           <div class="container-owner">
               <div class="rick">
-                <h6 class="card-text"><strong>Owned by <%= current_user.email.split('@')[0].capitalize %></strong></h6>
+                
+                <h6 class="card-text"><strong><%= current_user.email.split('@')[0].capitalize %></strong></h6>
+
               </div>
                 <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
           </div>

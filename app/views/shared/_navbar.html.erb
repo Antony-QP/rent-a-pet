@@ -6,6 +6,15 @@
       <% end %>
       <div class='home-navbar-text'><h3><strong>Rent-a-pet</strong></h3></div>
     </div>
+    <div class="d-flex justify-content-center">
+        <%= form_tag pets_path, method: :get do %>
+        <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search..."
+        %>
+  <% end %>
+    </div>
     <div class='home-navbar-menu'>
       <div class='home-owner'><h5><%= link_to "See all pets", pets_path%></h5></div>
       <div class='home-owner'><h5><%= link_to "Become an owner", new_pet_path%></h5> </div>
