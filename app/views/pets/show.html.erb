@@ -29,7 +29,11 @@
           <div class="container-show2">
             <div class="card mb-3">
               <h5 class="card-text2">Booking form</h5>
-              <%= link_to "Book animal", pet_path(@pet), class: "btn-bookpet"%>
+              <%= simple_form_for [@pet, @booking] do |f| %>
+                <%=  f.input :start_date, as: :date %>
+                <%=  f.input :end_date, as: :date %>
+                <%= f.submit class: "btn-bookpet"%>
+                <%  end %>
             </div>
           </div>
         </div>
