@@ -1,8 +1,5 @@
-<%= simple_form_for @pet do |f| %>
-<%=  f.input :name %>
-<%=  f.input :description %>
-<%=  f.input :location %>
-<%=  f.input :breed %>
-<%=  f.input :price %>
+<%= simple_form_for [@pet, @booking] do |f| %>
+<%=  f.input :start_date, as: :date %>
+<%=  f.input :end_date, as: :date %>
 <%= f.submit %>
 <%  end %>
