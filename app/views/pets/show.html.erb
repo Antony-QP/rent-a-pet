@@ -28,29 +28,42 @@
           </div>
           <br>
           <p class="card-text">Description: <%= @pet.description%></p>
-            <p class="card-text">Price: <%= @pet.price%> euro </p>
+            <p class="card-text">Price: <span class="pet-price-value"><%= @pet.price%></span> euro </p>
             <br>
               <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
-              <%= link_to "Delete Dog Post", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
+              <% if @pet.user_id == current_user.id %>
+              <%= link_to "Remove Dog Listing", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
+              <% end %>
+
           </div>
         </div>
         <div class="box2">
           <div class="container-show2">
             <div class="card mb-3 p-3">
-              <h5 class="card2">Book this pet!</h5>
+              <% if @pet.user_id == current_user.id %>
+              <h5><%= @pet.name %>is your dog!</h5>
+            <% else %>
+            <h5 class="card2">Book this pet!</h5>
+            <div class="">
               <%= simple_form_for [@pet, @booking] do |f| %>
-                <%=  f.text_field :start_date, data: {
-                  controller: "flatpickr",
-                  flatpickr_date_format: "Y-m-d",
-                  flatpickr_min_date: Time.zone.now
-                } %>
-                <%=  f.text_field :end_date, data: {
-                  controller: "flatpickr",
-                  flatpickr_date_format: "Y-m-d",
-                  flatpickr_min_date: Time.zone.now
-                } %>
-                <%= f.submit class: "btn-bookpet"%>
-                <%  end %>
+              <%=  f.text_field :start_date, class: "start-date-field", data: {
+                controller: "flatpickr",
+                flatpickr_date_format: "Y-m-d",
+                flatpickr_min_date: Time.zone.now
+              } %>
+              <%=  f.text_field :end_date, class: "end-date-field", data: {
+                controller: "flatpickr",
+                flatpickr_date_format: "Y-m-d",
+                flatpickr_min_date: Time.zone.now,
+                id: "end-date"
+              } %>
+                  <div class="border-top mt-3">
+                    <span>Total:  </span><span id="total-price"></span>
+                  </div>
+              <%= f.submit class: "btn-bookpet mt-3"%>
+              <%  end %>
+            </div>
+            <% end %>
             </div>
           </div>
         </div>
