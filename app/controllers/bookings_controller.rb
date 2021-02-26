@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking.pet = @pet
       @booking.save
-      redirect_to pets_path
+      redirect_to bookings_path
     end
 
     def edit
@@ -28,7 +28,8 @@ class BookingsController < ApplicationController
 
     def update
       @booking = Booking.find(params[:id])
-      @booking.update(booking_params)
+      @booking.status = params[:query]
+      @booking.save!
       redirect_to bookings_path
     end
 

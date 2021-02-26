@@ -10,7 +10,6 @@
 
           <div class="card-body text-left">
             <h5 class="card-title"><%= @pet.name %> - <%= @pet.breed %></h5>
-
             <div class="container-location">
               <div class="location-pet">
                 <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
@@ -21,7 +20,7 @@
           <div class="container-owner">
               <div class="rick">
                 
-                <h6 class="card-text"><strong><%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
+                <h6 class="card-text"><strong>Owner - <%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
 
               </div>
                 <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
@@ -34,7 +33,6 @@
               <% if @pet.user_id == current_user.id %>
               <%= link_to "Remove Dog Listing", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
               <% end %>
-
           </div>
         </div>
         <div class="box2">

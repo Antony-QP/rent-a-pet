@@ -1,7 +1,7 @@
 <div class="d-flex">
   <div class="container w-50">
     <div class="col-lg-12">
-      <h1>Pets in Amsterdam...</h1>
+      <h1>Pet Results...</h1>
       <% @pets.each do |pet| %>
       <div class="row">
         <div class="card mb-2 w-100">
@@ -27,7 +27,7 @@
                 <p><%= pet.description %></p>
               </div>
               <div class="price d-flex justify-content-end w-100">
-                <p><%= pet.price %> Euro / Day</p>
+                <p><%= pet.price %>€ / Day</p>
               </div>
             </div>
           </div>
