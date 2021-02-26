@@ -13,6 +13,7 @@
   height: 300px;
   border: 1px solid #dddddd;
   border-radius: 10px;
+  margin-bottom: 6px;
 }
 
 .card-dashboard-image {
@@ -32,6 +33,22 @@
 
 .card-dashboard-booking-status {
   width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+
+  i{
+    font-size: 40px;
+  }
+  .accepted-icon{
+    color: green;
+  }
+
+  .rejected-icon{
+    color: red;
+  }
 }
 
 .border-status {
