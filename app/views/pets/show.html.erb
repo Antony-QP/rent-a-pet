@@ -21,7 +21,7 @@
           <div class="container-owner">
               <div class="rick">
                 
-                <h6 class="card-text"><strong><%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
+                <h6 class="card-text"><strong>Owner - <%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
 
               </div>
                 <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
@@ -34,7 +34,6 @@
               <% if @pet.user_id == current_user.id %>
               <%= link_to "Remove Dog Listing", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
               <% end %>
-
           </div>
         </div>
         <div class="box2">
