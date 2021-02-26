@@ -30,7 +30,7 @@
           <br>
           <p class="card-text">Description: <%= @pet.description%></p>
             <p class="card-text">Price: <span class="pet-price-value"><%= @pet.price%></span> euro </p>
-            <br>
+
               <%= link_to "Back", pets_path, class: "btn btn-outline-secondary btn-sm"%>
               <% if @pet.user_id == current_user.id %>
               <%= link_to "Remove Dog Listing", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
