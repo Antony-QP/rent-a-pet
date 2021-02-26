@@ -1,43 +1,59 @@
 <div class="container-olivia">
-    <h1>My dashboard</h1>
-
-  <p>Upcoming</p>
-
+    <h1 class="h1-dashboard">My dashboard</h1>
+    <br>
+    <strong><p class="resizing-title">My bookings</p></strong>
   <% @my_bookings.each do |booking| %>
     <div class="card-dashboard">
       <div class="card-dashboard-image" style="background-image: url('<%= cl_image_path (booking.pet.photo.key)%>')">
       </div>
       <div class="card-dashboard-content">
-        <%= booking.pet.name %><br>
-        Location: <%= booking.pet.location%><br>
+        <span><i class="fas fa-map-marker-alt text-primary mr-2"></i><%= booking.pet.location%></span>
+        <br>
+        <br>
+        <div class="align-center-petbreeddescription">
+        <div class="pet-breed-font"><strong><%= booking.pet.name %> - <%= booking.pet.breed %><br></strong></div>
+        <div class="border-bottom"></div>
         <%= booking.pet.description %><br>
-        Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
+        <br>
+        <i class="far fa-calendar-times"></i>
+Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
+        <br>
+        </div>
+        <br>
+        <br>
+        <div class="align-right-bookingpetprice">
         <%= booking.pet.price %>€ per day
-        <br>
-        <br>
-        See pet details
+        </div>
       </div>
       <div class="card-dashboard-booking-status"></div>
     </div>
   <% end %>
 
-<div class="border-status">
-<p>Past</p>
-</div>
-
-  <% @my_pets_bookings.each do |booking| %>
+  <br>
+  <br>
+  <div class="booking-separator"></div>
+  <br>
+  <strong><p class="resizing-title">My pets</p></strong>
+    <% @my_pets_bookings.each do |booking| %>
     <div class="card-dashboard">
       <div class="card-dashboard-image" style="background-image: url('<%= cl_image_path (booking.pet.photo.key)%>')">
       </div>
       <div class="card-dashboard-content">
-        <%= booking.pet.name %><br>
-        Location: <%= booking.pet.location%><br>
-        <%= booking.pet.description %><br>
+        <br>
+        <br>
+        <div class="align-center-petbreeddescription">
+        <div class="pet-breed-font"><strong><%= booking.pet.name %> - <%= booking.pet.breed %><br></strong></div>
+        <div class="border-bottom"></div>
+        <br>
+        <i class="far fa-calendar-times"></i>
         Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
+        <br>
+        </div>
+        <br>
+        <br>
+        <div class="align-right-bookingpetprice">
         <%= booking.pet.price %>€ per day
-        <br>
-        <br>
-        See pet details
+        </div class="btn-bookpet">
       </div>
       <div class="card-dashboard-booking-status"></div>
     </div>
