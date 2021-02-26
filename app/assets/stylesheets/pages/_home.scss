@@ -79,6 +79,9 @@
     text-decoration: none;
     color: gray;
 }
+.home-navbar-menu a:hover{
+  color: $primary
+}
 
 .home-owner {
     margin: 6px;

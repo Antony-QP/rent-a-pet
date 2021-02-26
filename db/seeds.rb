@@ -25,7 +25,7 @@ pet1.photo.attach(io: pet_1_picture, filename: 'pet1.png', content_type: 'image/
 pet1.save!
 
 pet_2_picture = URI.open('https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201030094143-stock-rhodesian-ridgeback.jpg')
-pet2 = Pet.new(name: "Bob", location: "De Bijvank", breed: "Rhodesian Ridgeback", description: "Happy dog", price: 15, user_id: user2.id)
+pet2 = Pet.new(name: "Bob", location: "De Bijvank", breed: "Rhodesian Ridgeback", description: "Happy dog", price: 15, user_id: user1.id)
 pet2.photo.attach(io: pet_2_picture, filename: 'pet2.png', content_type: 'image/png')
 pet2.save!
 
@@ -72,5 +72,9 @@ pet10.save!
 puts "creating bookings..."
 booking1 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,05), user_id: user1.id, pet_id: pet3.id)  
 booking1.save!
+booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user1.id, pet_id: pet4.id)   
+booking2.save!
 booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet1.id)   
+booking2.save!
+booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet2.id)   
 booking2.save!
