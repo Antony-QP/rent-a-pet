@@ -22,13 +22,28 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+
+
+
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutoComplete } from '../plugins/init_autocomplete';
+import { Application } from 'stimulus'
+import { definitionsFromContext } from 'stimulus/webpack-helpers'
+// import Flatpickr
+import Flatpickr from 'stimulus-flatpickr'
+// Import style for flatpickr
+require("flatpickr/dist/flatpickr.css")
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+
+const application = Application.start()
+const context = require.context('../controllers', true, /\.js$/)
+application.load(definitionsFromContext(context))
+
+// Manually register Flatpickr as a stimulus controller
+application.register('flatpickr', Flatpickr)
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:

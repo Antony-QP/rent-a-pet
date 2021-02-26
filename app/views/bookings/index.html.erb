@@ -1,8 +1,6 @@
 <div class="container-olivia">
     <h1>My dashboard</h1>
 
-  <p>Upcoming</p>
-
   <% @my_bookings.each do |booking| %>
     <div class="card-dashboard">
       <div class="card-dashboard-image" style="background-image: url('<%= cl_image_path (booking.pet.photo.key)%>')">
@@ -17,12 +15,14 @@
         <br>
         See pet details
       </div>
-      <div class="card-dashboard-booking-status"></div>
+      <div class="card-dashboard-booking-status">
+        <%= booking.status %>
+      </div>
+      <%= link_to "View Booking", edit_booking_path(booking) %>
     </div>
   <% end %>
 
 <div class="border-status">
-<p>Past</p>
 </div>
 
   <% @my_pets_bookings.each do |booking| %>
@@ -39,7 +39,10 @@
         <br>
         See pet details
       </div>
-      <div class="card-dashboard-booking-status"></div>
+      <div class="card-dashboard-booking-status">
+        <%= booking.status %>
+      </div>
+      <%= link_to "View Booking Request", edit_booking_path(booking) %>
     </div>
   <% end %>
 </div>
