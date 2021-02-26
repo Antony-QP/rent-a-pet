@@ -50,4 +50,22 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initAutoComplete();
+
+  const totalPrice = document.querySelector('#total-price')
+  const startDate = document.querySelector('.start-date-field')
+  const endDate = document.querySelector('.end-date-field')
+  const price = document.querySelector('.pet-price-value').innerText
+  
+
+
+  endDate.addEventListener('change', (event) => {
+    
+    const sum = ((new Date(endDate.value).getTime() - new Date(startDate.value).getTime())/86400000);
+
+    const priceInteger = parseInt(price);
+
+    totalPrice.textContent = `${price}€   x   ${sum} days =  ${sum * priceInteger}€`;
+  });
 });
+
+
