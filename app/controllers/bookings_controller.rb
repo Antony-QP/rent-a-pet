@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
     def index
+      # @booking = Booking.find(params[:id])
       @bookings = Booking.all
       @pets = Pet.all
       @my_bookings = current_user.bookings
@@ -23,15 +24,17 @@ class BookingsController < ApplicationController
 
     def edit
       @booking = Booking.find(params[:id])
-
     end
 
     def update
+      @booking = Booking.find(params[:id])
+      @booking.update(booking_params)
+      redirect_to bookings_path
     end
 
     private
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date)
+      params.require(:booking).permit(:start_date, :end_date, :status)
     end
 end

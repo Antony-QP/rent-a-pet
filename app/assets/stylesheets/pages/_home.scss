@@ -9,19 +9,20 @@
 .home-banner h2 {
   margin-top: 30px;
   margin-bottom: 24px;
-  font-size: 85px;
+  font-size: 60px;
 }
 
 .container-olivia h2 {
-  font-size: 40px;
-  margin-bottom: 35px;
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 .home-card-image {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 400px;
+  height: 200px;
+  radius: 25px;
 }
 
 .cards {
@@ -30,6 +31,9 @@
   justify-content: space-between;
 }
 
+.card-title {
+  padding: 5px;
+}
 .card {
   width: 100%;
   border-radius: 10px;
@@ -37,6 +41,7 @@
   text-align: center;
   border: 1px solid rgb(230,230,230);
   margin-right: 16px;
+  height: 260px;
 }
 
 .fas.fa-paw {
@@ -52,7 +57,7 @@
 }
 
 .navbar-lewagon {
-    height: 60px;
+    height: 70px;
     padding-top: 12px;
     z-index: 2000;
 }
@@ -88,10 +93,10 @@
 }
 
 .home-banner {
-    height: 90vh;
+    height: 87vh;
     width: 100%;
     background-size: cover;
-    background-position: center bottom;
+    background-position: right bottom;
     background-image: url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
 }
 
@@ -102,14 +107,14 @@
 }
 
 .banner-paragraph {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     color: white;
 }
 
 .home-buttons-links {
     display: flex;
-    padding-top: 20px;
-    margin-bottom: 250px;
+    padding-top: 10px;
+    margin-bottom: 50px;
 }
 
 .home-buttons-links a {
@@ -118,18 +123,19 @@
 
 .home-banner-container-text {
     padding-left: 30px;
-    padding-top: 30px;
+    padding-top: 100px;
     margin-left: 200px
 }
 
 .btn-seeallpets {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border-radius: 4px;
   background: rgb(248, 56, 92);
-  transition: background 0.3s ease;
-  padding: 20px 40px 20px 40px;
-  font-size: 24px;
+  transition: background 0.6s ease;
+  padding: 11px 22px;
+  font-size: 19px;
+  border: 1px solid white;
 }
 
 .btn-listapet {
@@ -137,23 +143,26 @@
   padding: 8px 24px;
   border-radius: 4px;
   background: white;
-  transition: background 0.3s ease;
-  padding: 20px 40px 20px 40px;
-  font-size: 24px;
+  transition: background 0.6s ease;
+  padding: 11px 22px;
+  font-size: 19px;
+  border: 1px solid rgb(248, 56, 92);
 }
 
 .btn-seeallpets:hover {
-  background: rgb(248, 56, 92);
-  color: white;
-  text-decoration: none;
-}
-
-.btn-listapet:hover {
   background: white;
   color: rgb(248, 56, 92);
   text-decoration: none;
+  border: 1px solid rgb(248, 56, 92);
+}
+
+.btn-listapet:hover {
+  background: rgb(248, 56, 92);
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
 }
 
 .container-olivia h5 {
-  font-size: 25px;
+  font-size: 20px;
 }

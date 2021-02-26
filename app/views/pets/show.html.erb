@@ -21,7 +21,7 @@
           <div class="container-owner">
               <div class="rick">
                 
-                <h6 class="card-text"><strong><%= current_user.email.split('@')[0].capitalize %></strong></h6>
+                <h6 class="card-text"><strong><%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
 
               </div>
                 <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
@@ -34,14 +34,21 @@
               <%= link_to "Delete Dog Post", pet_path(@pet), class: "btn btn-outline-secondary btn-sm", method: :delete, data: { confirm: "Delete?" }%>
           </div>
         </div>
-
         <div class="box2">
           <div class="container-show2">
             <div class="card mb-3 p-3">
               <h5 class="card2">Book this pet!</h5>
               <%= simple_form_for [@pet, @booking] do |f| %>
-                <%=  f.input :start_date, as: :date %>
-                <%=  f.input :end_date, as: :date %>
+                <%=  f.text_field :start_date, data: {
+                  controller: "flatpickr",
+                  flatpickr_date_format: "Y-m-d",
+                  flatpickr_min_date: Time.zone.now
+                } %>
+                <%=  f.text_field :end_date, data: {
+                  controller: "flatpickr",
+                  flatpickr_date_format: "Y-m-d",
+                  flatpickr_min_date: Time.zone.now
+                } %>
                 <%= f.submit class: "btn-bookpet"%>
                 <%  end %>
             </div>

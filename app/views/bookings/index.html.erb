@@ -25,10 +25,13 @@ Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
         <%= booking.pet.price %>€ per day
         </div>
       </div>
-      <div class="card-dashboard-booking-status"></div>
+      <div class="card-dashboard-booking-status">
+        <%= booking.status %>
+      </div>
+      <%= link_to "View Booking", edit_booking_path(booking) %>
     </div>
   <% end %>
-
+  
   <br>
   <br>
   <div class="booking-separator"></div>
@@ -55,7 +58,10 @@ Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
         <%= booking.pet.price %>€ per day
         </div class="btn-bookpet">
       </div>
-      <div class="card-dashboard-booking-status"></div>
+      <div class="card-dashboard-booking-status">
+        <%= booking.status %>
+      </div>
+      <%= link_to "View Booking Request", edit_booking_path(booking) %>
     </div>
   <% end %>
 </div>

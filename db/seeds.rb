@@ -70,7 +70,7 @@ pet10.photo.attach(io: pet_10_picture, filename: 'pet10.png', content_type: 'ima
 pet10.save!
 
 puts "creating bookings..."
-booking1 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,05), user_id: user1.id, pet_id: pet1.id)  
+booking1 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,05), user_id: user1.id, pet_id: pet3.id)  
 booking1.save!
-booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet2.id)   
+booking2 = Booking.new(start_date: Date.new(2021,03,03), end_date: Date.new(2021,03,06), user_id: user2.id, pet_id: pet1.id)   
 booking2.save!
