@@ -1,22 +1,24 @@
-<div class="card-dashboard">
-    <div class="card-dashboard-image" style="background-image: url('<%= cl_image_path (@booking.pet.photo.key)%>')">
-    </div>
-    <div class="card-dashboard-content">
-      <%= @booking.pet.name %><br>
-      Location: <%= @booking.pet.location%><br>
-      <%= @booking.pet.description %><br>
-      Booking date: from <%= @booking.start_date %> to <%= @booking.end_date %><br>
-      <%= @booking.pet.price %>€ per day
-      <br>
-      <br>
-      See pet details
-    </div>
-    <div class="card-dashboard-booking-status">
-    </div>
-    <% if @booking.pet.user_id == current_user.id %>
-    <%= simple_form_for @booking do |f| %>
-    <%= f.input :status, :collection => ["Accept", "Reject"] %>
-    <%= f.submit "Confirm status", class: "btn btn-primary" %>
-<%  end %>
-<% end  %>
-  </div>
+<div class="container mt-5">
+    <div class="card-dashboard">
+        <div class="card-dashboard-image" style="background-image: url('<%= cl_image_path (@booking.pet.photo.key)%>')">
+        </div>
+        <div class="card-dashboard-content">
+          <%= @booking.pet.name %><br>
+          Location: <%= @booking.pet.location%><br>
+          <%= @booking.pet.description %><br>
+          Booking date: from <%= @booking.start_date %> to <%= @booking.end_date %><br>
+          <%= @booking.pet.price %>€ per day
+          <br>
+          <br>
+          See pet details
+        </div>
+        <div class="card-dashboard-booking-status">
+        </div>
+        <% if @booking.pet.user_id == current_user.id %>
+        <%= simple_form_for @booking do |f| %>
+        <%= f.input :status, :collection => ["Accept", "Reject"] %>
+        <%= f.submit "Confirm status", class: "btn btn-primary" %>
+    <%  end %>
+    <% end  %>
+      </div>
+</div>

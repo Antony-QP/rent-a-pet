@@ -1,5 +1,5 @@
 <div class="container-olivia">
-    <h1 class="h1-dashboard">My dashboard</h1>
+    <h1 class="h1-dashboard">Dashboard</h1>
     <br>
     <strong><p class="resizing-title">My bookings</p></strong>
   <% @my_bookings.each do |booking| %>
@@ -22,13 +22,15 @@ Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
         <br>
         <br>
         <div class="align-right-bookingpetprice">
-        <%= booking.pet.price %>€ per day
+        <%= booking.pet.price %>€ / day
         </div>
       </div>
       <div class="card-dashboard-booking-status">
-        <%= booking.status %>
+        <div>
+          <p><%= booking.status %></p>
+          <%= link_to "View Booking", edit_booking_path(booking) %>
+        </div>
       </div>
-      <%= link_to "View Booking", edit_booking_path(booking) %>
     </div>
   <% end %>
   
@@ -55,13 +57,24 @@ Booking date: from <%= booking.start_date %> to <%= booking.end_date %><br>
         <br>
         <br>
         <div class="align-right-bookingpetprice">
-        <%= booking.pet.price %>€ per day
+        <%= booking.pet.price %>€ / day
         </div class="btn-bookpet">
       </div>
       <div class="card-dashboard-booking-status">
-        <%= booking.status %>
+        <% if booking.status == 'pending' %>
+        <%= link_to booking_path(booking, query: "accepted"), method: :patch, data: { confirm: "Are you sure?"} do %>
+          <i class="fas fa-check-circle accepted-icon"></i>
+        <% end %>
+        <%= link_to booking_path(booking, query: "declined"), method: :patch, data: { confirm: "Are you sure?"} do %>
+          <i class="fas fa-times-circle declined-icon"></i>
+        <% end %>
+        <% else %>
+        <div class="">
+          <p><%= booking.status %></p>
+          <%= link_to "View Booking", edit_booking_path(booking) %>
+        </div>
+        <% end  %>
       </div>
-      <%= link_to "View Booking Request", edit_booking_path(booking) %>
     </div>
   <% end %>
 </div>
