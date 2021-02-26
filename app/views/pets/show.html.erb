@@ -41,7 +41,7 @@
           <div class="container-show2">
             <div class="card mb-3 p-3">
               <% if @pet.user_id == current_user.id %>
-              <h5><%= @pet.name %>is your dog!</h5>
+              <h5><%= @pet.name %> is your <%= @pet.breed %></h5>
             <% else %>
             <h5 class="card2">Book this pet!</h5>
             <div class="">
