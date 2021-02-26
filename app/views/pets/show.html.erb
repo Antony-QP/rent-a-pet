@@ -13,15 +13,15 @@
 
             <div class="container-location">
               <div class="location-pet">
-                <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
+                <i class="fas fa-map-marker-alt text-primary mr-1"></i>
               </div>
-                <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                <h6 class="card-text"><medium><%= @pet.location %></medium></h6>
             </div>
 
           <div class="container-owner">
               <div class="rick">
-                
-                <h6 class="card-text"><strong><%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
+
+                <h6 class="card-text"><strong>Owned by <%= @pet.user.email.split('@')[0].capitalize %></strong></h6>
 
               </div>
                 <%= image_tag("rick.png", class: "avatar-bordered-medium") %>
@@ -58,6 +58,7 @@
                 id: "end-date"
               } %>
                   <div class="border-top mt-3">
+                    <br>
                     <span>Total:  </span><span id="total-price"></span>
                   </div>
               <%= f.submit class: "btn-bookpet mt-3"%>
