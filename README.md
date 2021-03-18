@@ -12,4 +12,4 @@ It's never been more important to have company these days and rent-a-pet does ex
 Rubyon Rails, Ruby, Javascript and Postgres.
 
 ### Licence
-MIT - Antony Parker, Daan Dalman, Olivia Forbault and Frans Scholten
+MIT © Antony Parker, Daan Dalman, Olivia Forbault and Frans Scholten
